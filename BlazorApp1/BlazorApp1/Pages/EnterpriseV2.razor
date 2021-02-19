@@ -1,0 +1,19 @@
+﻿@page "/enterpriseV2"
+
+<h1>僅限企業內部人員</h1>
+
+<AuthorizeView>
+    <Authorized>
+        <p>您已經登入, 因此可以訪問這頁面</p>
+
+        詳細參閱:
+        <ul>
+            <li>
+                https://docs.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-5.0#authorize-attribute
+            </li>
+        </ul>
+    </Authorized>
+    <NotAuthorized>
+        您必需登入後,才能訪問這頁的內容.
+    </NotAuthorized>
+</AuthorizeView>

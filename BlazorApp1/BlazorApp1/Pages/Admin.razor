@@ -1,0 +1,28 @@
+﻿@page "/admin"
+
+<h1>僅限 系統管理員</h1>
+
+<AuthorizeView Roles = "Admin">
+    <Authorized>
+        <p>您具有 <mark>系統管理員</mark> 的角色,也已經登入, 因此可以訪問這頁面</p>
+
+        這是可以操作的功能:
+        <ul>
+            <li>
+                
+                AAA
+
+            </li>
+            <li>
+                BBB
+            </li>
+            <li>
+                CCC
+            </li>
+
+        </ul>
+    </Authorized>
+    <NotAuthorized>
+        您必需具有<mark>系統管理員</mark> 的角色,登入後,才能操作這頁面的功能。
+    </NotAuthorized>
+</AuthorizeView>

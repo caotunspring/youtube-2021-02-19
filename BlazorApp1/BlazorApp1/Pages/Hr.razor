@@ -1,0 +1,26 @@
+﻿@page "/hr"
+
+<h1>僅限 HR 人員</h1>
+
+<AuthorizeView Roles = "HR">
+    <Authorized>
+        <p>您是HR人員,也已經登入, 因此可以訪問這頁面</p>
+
+        這是HR內部的信息:
+        <ul>
+            <li>
+                111...
+            </li>
+            <li>
+                222.
+            </li>
+            <li>
+                333...
+            </li>
+
+        </ul>
+    </Authorized>
+    <NotAuthorized>
+        您必需具有HR身份,登入後,才能訪問這頁的內容.
+    </NotAuthorized>
+</AuthorizeView>
