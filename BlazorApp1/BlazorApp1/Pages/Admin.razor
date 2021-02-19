@@ -1,15 +1,15 @@
 ﻿@page "/admin"
-
+@attribute [Authorize (Roles ="Admin")]
 <h1>僅限 系統管理員</h1>
 
-<AuthorizeView Roles = "Admin">
+<AuthorizeView Roles="Admin">
     <Authorized>
         <p>您具有 <mark>系統管理員</mark> 的角色,也已經登入, 因此可以訪問這頁面</p>
 
         這是可以操作的功能:
         <ul>
             <li>
-                
+
                 AAA
 
             </li>

@@ -40,7 +40,18 @@ namespace BlazorApp1
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddRazorPages();
+            //services.AddRazorPages();
+            //https://docs.microsoft.com/en-us/aspnet/core/security/authorization/razor-pages-authorization?view=aspnetcore-5.0
+            //services.AddRazorPages(options =>
+            //{
+            //    options.Conventions.AuthorizePage("/Contact");
+            //    options.Conventions.AuthorizeFolder("/Private");
+            //    options.Conventions.AllowAnonymousToPage("/Private/PublicPage");
+            //    options.Conventions.AllowAnonymousToFolder("/Private/PublicPages");
+            //});
+
+
+
             services.AddServerSideBlazor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
             services.AddDatabaseDeveloperPageExceptionFilter();
